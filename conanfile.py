@@ -7,7 +7,7 @@ import os
 
 class Libssh2Conan(ConanFile):
     name = "libssh2"
-    version = "1.8.2"
+    version = "1.9.0"
     description = "libssh2 is a client-side C library implementing the SSH2 protocol"
     url = "https://github.com/bincrafters/conan-libssh2"
     homepage = "https://libssh2.org"
@@ -58,7 +58,7 @@ class Libssh2Conan(ConanFile):
         if self.options.with_zlib:
             self.requires.add("zlib/1.2.11@conan/stable")
         if self.options.with_openssl:
-            self.requires.add("OpenSSL/latest_1.0.2x@conan/stable")
+            self.requires.add("OpenSSL/1.1.1c@conan/stable")
 
     def build(self):
         cmake = CMake(self)
